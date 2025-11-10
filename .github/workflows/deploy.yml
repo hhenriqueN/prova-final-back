@@ -59,4 +59,4 @@ jobs:
               -e MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }} \
               -e MYSQL_HOST=mysql \
               --network=rede --name prova-final \
-              ezambomsantana/prova-final-ci:${{ github.sha }}
+              iquenavarro/prova-final-ci:${{ github.sha }}
