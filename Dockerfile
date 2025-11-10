@@ -1,5 +1,7 @@
 FROM amazoncorretto:21
 
-COPY target/exercicio-0.0.1-SNAPSHOT.jar /app.jar
+# Usamos um curinga (*.jar) para copiar o JAR da pasta target.
+# Isso torna o Dockerfile independente do nome ou versão do artefato.
+COPY target/*.jar /app.jar
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
